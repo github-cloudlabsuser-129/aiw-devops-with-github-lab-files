@@ -280,4 +280,4 @@ jobs:
       - name: purge CDN endpoint
         uses: azure/CLI@v1
         with:
-          inlineScript: az cdn endpoint purge --no-wait --content-paths '/*' -n '${{ env.UI_CDN_ENDPOINT_NAME }}${{ secrets.ENVIRONMENT }}' -g '${{ env.RESOURCE_GROUP_NAME }}${{ secrets.ENVIRONMENT }}' --profile-name '${{ env.CDN_PROFILE_NAME }}${{ secrets.ENVIRONMENT }}'
+          inlineScript: az cdn endpoint purge --no-wait --content-paths '/app' -n '${{ env.UI_CDN_ENDPOINT_NAME }}${{ secrets.ENVIRONMENT }}' -g '${{ env.RESOURCE_GROUP_NAME }}${{ secrets.ENVIRONMENT }}' --profile-name '${{ env.CDN_PROFILE_NAME }}${{ secrets.ENVIRONMENT }}'
